@@ -1,0 +1,123 @@
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[scientific-notation=true]{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\graphicspath{{images/}}
+\usepackage{natbib} % Required to change bibliography style to APA
+\usepackage{amsmath} % Required for some math elements 
+\usepackage[spanish,activeacute]{babel}
+\usepackage{float}
+\usepackage[table]{xcolor}
+\usepackage[table]{xcolor}
+\usepackage{anysize}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pdfpages}%insertar pdf
+\marginsize{1in}{1in}{1in}{1in} 
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage{multirow, array}
+\usepackage{graphicx}
+\usepackage{flushend}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+\newcolumntype{a}{>{\columncolor[gray]{0.9}}c}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%
+%PORTADA
+%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+
+\includegraphics[width=0.3\textwidth]{Escudo_Unison.png}~\\[1cm]
+
+\textsc{\LARGE Universidad de Sonora}\\[0.1cm]
+\textsc{División de Ciencias Exactas y Naturales}\\[0.1cm]
+\textsc{Departamento de Física}\\[1.5cm]
+%\includegraphics[width=0.3\textwidth]{.png}~\\[1cm]
+
+\HRule \\[0.4cm]
+\textsc{Física Computacional I\\[0.1cm]}
+\textsc{El Atractor de Lorenz, ejemplo de Caos Dinámico}\\[0.1cm]
+\HRule \\[1.5cm]
+\begin{center}
+	\textbf{Evaluación 2 (2018-1)}
+\end{center}
+
+\textsc{Rolando Abdel Fimbres Grijalva \\[0.5cm]}
+
+\vfill
+\textsc{26 de abril de 2018\\[0.1cm]}
+\pagenumbering{gobble}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\section{Introducción}
+El atractor de Lorenz es un sistema dinámico determinista tridimensional no lineal que se derivo de ecuaciones diferenciales que describían el comportamciento del viento así como transferencias de calor producidas en la atmósfera, inicialmente como un modelo matemático simplificado para la convección atmosférica. 
+\section{Desarollo}
+La práctica consta de cuatro pasos:\\
+\begin{itemize}
+\item Replicar el código proporcionado (del autor Geoff Boeing) para la visualización y animación del atractor.\\
+\item Construir una gráfica bidimensional que muestre las soluciones de $x(t)$, $y(t)$ y $z(t)$ para así observar la evolución temporal.
+\item Repetir los mismos cálculos (visualización y animación) pero ahora para: $\sigma=28$, $\beta=4$ y $\rho=46.92$ contrastando los casos anteriores.
+\item Explorar el caso $\sigma=10$, $\beta=\frac{8}{3}$ y $\rho=99.96$ describiendo los resultados obtenidos. 
+\end{itemize}
+\section{Resultados}
+Durante el primer paso replicamos el código e introducimos los valores por defecto para cada variable, obteniendo:\\
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\linewidth]{vs_v.png}
+\end{figure}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\linewidth]{vs_a.png}
+\end{figure}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\linewidth]{vs_f.png}
+\end{figure}
+En el segundo caso observamos dos imagenes de la evolución temporal, la segunda en un rango distinto a la anterior.\\
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\linewidth]{et1.png}
+\end{figure}\begin{figure}[H]
+	\centering
+    \includegraphics[width=\linewidth]{et2.png}
+\end{figure}
+Para el siguiente caso necesitamos cambiar los parámetros, resultando en:\\
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\linewidth]{v1_v.png}
+\end{figure}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\linewidth]{v1_a.png}
+\end{figure}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\linewidth]{v1_f.png}
+\end{figure}
+Finalizando con una última modificación a los parámetros.
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\linewidth]{v2_v.png}
+\end{figure}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\linewidth]{v2_a.png}
+\end{figure}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\linewidth]{v2_f.png}
+\end{figure}
+\subsection{Contraste}
+En el tercer paso observamos que el cambio ocasionó la concentración del movimiento hacia las orillas del atractor. En cambio en la última modificación observamos un comportamiento completamente distinto a los anteriores, como si se tratase de un fenómeno de otra naturaleza. Observamos que los parámetros influyen en la saturación del atractor algo que notamos facilmente en los diagramas de los distintos planos.
+\end{document}
